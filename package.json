@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "generate": "yarn run openapi --input https://crud-example-api.vercel.app/openapi.json --output generated --client axios"
   },
   "dependencies": {
     "expo": "~48.0.18",

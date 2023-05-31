@@ -10,6 +10,7 @@
     "generate": "npx openapi-typescript-codegen --input https://crud-example-api.vercel.app/openapi.json --output generated --client axios"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "expo": "~48.0.18",
     "expo-status-bar": "~1.4.4",
     "nativewind": "^2.0.11",

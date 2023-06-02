@@ -1,27 +1,13 @@
-import { StatusBar } from "expo-status-bar";
-import { useEffect, useState } from "react";
-import { Text, View } from "react-native";
-import { SimpleCrudService } from "./generated";
+import { StatusBar } from 'expo-status-bar';
+import { PaperProvider } from 'react-native-paper';
 
-export default function App() {
-  const fetchUsers = async () => {
-    try {
-      const response = await SimpleCrudService.listUsersUsersGet();
-      console.log(response, "response");
-    } catch (error) {
-      console.error(error, "error");
-    }
-  };
+import AppComponent from './src/components/app';
 
-  useEffect(() => {
-    console.log("useEffect");
-    fetchUsers();
-  }, []);
-
+export default function App(): JSX.Element {
   return (
-    <View className="flex-1 items-center justify-center bg-blue-100 h-full">
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <PaperProvider>
+      <AppComponent />
+      <StatusBar hidden />
+    </PaperProvider>
   );
 }

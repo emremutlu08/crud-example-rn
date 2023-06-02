@@ -7,7 +7,10 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "generate": "npx openapi-typescript-codegen --input https://crud-example-api.vercel.app/openapi.json --output ./generated --client axios"
+    "generate": "npx openapi-typescript-codegen --input https://crud-example-api.vercel.app/openapi.json --output ./generated --client axios",
+    "test": "jest --watch",
+    "lint": "eslint .",
+    "format": "prettier ."
   },
   "dependencies": {
     "axios": "^1.4.0",
@@ -27,6 +30,7 @@
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
     "@testing-library/jest-native": "^5.4.2",
     "@testing-library/react-native": "^12.1.2",
+    "@types/jest": "^29.5.2",
     "@types/react": "~18.0.14",
     "@types/react-native": "^0.72.2",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
@@ -39,13 +43,14 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-native": "^4.0.0",
+    "jest-expo": "^48.0.2",
     "prettier": "2.8.8",
     "tailwindcss": "^3.3.2",
     "typescript": "^4.9.4"
   },
   "private": true,
   "jest": {
-    "preset": "react-native",
+    "preset": "jest-expo",
     "setupFilesAfterEnv": [
       "@testing-library/jest-native/extend-expect"
     ]

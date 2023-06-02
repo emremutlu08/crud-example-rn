@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { type ViewStyle } from 'react-native';
 import { Modal, Portal, type ModalProps } from 'react-native-paper';
 
 interface PortalModalProps extends ModalProps {
@@ -8,19 +9,17 @@ interface PortalModalProps extends ModalProps {
 
 export default function PortalModal(props: PortalModalProps): JSX.Element {
   const { children, onDismiss, visible, isLeftDrawer = false } = props;
-  let containerStyle: {
-    backgroundColor: string;
-    width?: string;
-    flex?: number;
-  } = {
+  let containerStyle: ViewStyle = {
     backgroundColor: 'white',
   };
 
   if (isLeftDrawer) {
     containerStyle = {
-      backgroundColor: 'white',
+      backgroundColor: '#F2EAE1',
       width: '80%',
       flex: 1,
+      justifyContent: 'flex-start',
+      padding: 20,
     };
   }
 

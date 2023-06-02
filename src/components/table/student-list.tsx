@@ -34,12 +34,6 @@ export default function StudentList(): JSX.Element {
   const fetchUsers = async (): Promise<void> => {
     try {
       const response = await SimpleCrudService.listUsersUsersGet();
-      // [
-      //   {"age": 7, "hometown": "gcg", "key": "user:1e435132-c0be-4164-9b5d-fe48a28039a3", "name": "tffhu"},
-      //   {"age": 55, "hometown": "vuuvu", "key": "user:2ebebcdb-4d6c-4a37-9f52-8b72238bda67", "name": "yguu"}, {"age": 19, "hometown": "İzmir", "key": "user:52bcaa6a-1d81-46f4-99e8-2b07c0bf059f", "name": "Fatma"}, {"age": 33, "hometown": "Chekoslovaki", "key": "user:6014c153-3a88-4ad7-b5f8-064895ab35a9", "name": "Behzad"}, {"age": 4, "hometown": "df", "key": "user:872dcd79-bb92-49c5-8094-bc1e68306f64", "name": "7f6f"}, {"age": 21, "hometown": "Adana", "key": "user:8cf70645-726a-4fbf-9006-58c7db587304", "name": "Mehmet"}, {"age": 24, "hometown": "Adana", "key": "user:8dabea99-5326-4a77-9a58-c7507fa21b99", "name": "Emrah"}, {"age": 28, "hometown": "Zonguldak", "key": "user:97c27ca5-6570-4376-9a27-eecd6f76e790", "name": "Nurallah"}
-      // ]
-      console.log(response, 'response');
-      console.log(typeof response, 'typeof response');
       setUsers(response);
     } catch (error) {
       console.error(error, 'error');

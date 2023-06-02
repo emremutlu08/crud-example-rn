@@ -41,7 +41,6 @@ export default function StudentList(): JSX.Element {
   };
 
   React.useEffect(() => {
-    console.log('useEffect');
     fetchUsers().catch((error) => {
       console.error(error, 'error');
     });

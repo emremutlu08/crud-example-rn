@@ -45,9 +45,8 @@ export default function StudentInfoForm(props: IStudentInfoFormProps): JSX.Eleme
           toast('Completed!');
           onSubmit();
         })().catch((err) => {
-          console.log(err, 'err');
+          console.error(err, 'err');
         });
-        console.log(values, 'values');
       }}
     >
       {({ handleChange, handleBlur, handleSubmit, values }) => {

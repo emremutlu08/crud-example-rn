@@ -1,3 +1,3 @@
-import { SimpleCrudService } from "../../generated";
+import { SimpleCrudService } from '../../generated';
 
 export const apiClient = new SimpleCrudService();

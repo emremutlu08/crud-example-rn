@@ -58,7 +58,7 @@ export default function StudentInfoForm(props: IStudentInfoFormProps): JSX.Eleme
         });
       }}
     >
-      {({ handleChange, handleBlur, handleSubmit, values, touched }) => {
+      {({ handleChange, handleBlur, handleSubmit, values, touched, errors }) => {
         return (
           <>
             <StyledInput
@@ -66,7 +66,7 @@ export default function StudentInfoForm(props: IStudentInfoFormProps): JSX.Eleme
               onChangeText={handleChange('name')}
               onBlur={handleBlur('name')}
               value={values.name}
-              error={touched?.name}
+              error={Boolean(touched?.name) && Boolean(errors?.name)}
             />
             <StyledInput
               label="Age"
@@ -74,14 +74,14 @@ export default function StudentInfoForm(props: IStudentInfoFormProps): JSX.Eleme
               onBlur={handleBlur('age')}
               value={values.age}
               keyboardType="numeric"
-              error={touched?.age}
+              error={Boolean(touched?.age) && Boolean(errors?.age)}
             />
             <StyledInput
               label="Hometown"
               onChangeText={handleChange('hometown')}
               onBlur={handleBlur('hometown')}
               value={values.hometown}
-              error={touched?.hometown}
+              error={Boolean(touched?.hometown) && Boolean(errors?.hometown)}
             />
 
             <StyledButton

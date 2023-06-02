@@ -5,6 +5,10 @@
 - Run `npm install` to install all dependencies
 - Run `npm start` to start the app
 - Run `npm run android` to run the app on android device
+- Run `npm run ios` to run the app on ios device
+- Run `npm run generate` to generate the api client
+- Run `npm run lint` to lint the code
+- Run `npm run test` to run the tests
 - Do not run the `npm run generate` command, it will overwrite the `generated` folder
 - `generated` folder has some modified files, so do not delete it. Those files are:
   - `generated/core/OpenAPI.ts` => Credentials

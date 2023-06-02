@@ -21,6 +21,7 @@ export default function AreYouSureDialog(props: IAreYouSureDialogProps): JSX.Ele
     if (user?.key !== undefined) {
       await SimpleCrudService.deleteUserUsersUserKeyDelete(user.key);
     }
+
     toast('Completed!');
     onSubmit();
   };
@@ -35,7 +36,7 @@ export default function AreYouSureDialog(props: IAreYouSureDialogProps): JSX.Ele
           (async () => {
             await handleDelete();
           })().catch((err) => {
-            console.log(err, 'err');
+            console.error(err, 'err');
           });
         }}
       >

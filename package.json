@@ -6,7 +6,6 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web",
     "generate": "npx openapi-typescript-codegen --input https://crud-example-api.vercel.app/openapi.json --output ./generated --client axios",
     "test": "jest --watch",
     "lint": "eslint .",

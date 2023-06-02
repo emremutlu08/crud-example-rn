@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState, useEffect } from 'react';
 
 import { styled } from 'nativewind';
 import { View } from 'react-native';
@@ -16,8 +16,8 @@ const StyledDivider = styled(Divider);
 const StyledIconButton = styled(IconButton);
 
 export default function StudentList(): JSX.Element {
-  const [users, setUsers] = React.useState<UserResponseModel[]>([]);
-  const [modalInfo, setModalInfo] = React.useState<IModalInfo>({
+  const [users, setUsers] = useState<UserResponseModel[]>([]);
+  const [modalInfo, setModalInfo] = useState<IModalInfo>({
     mode: 'closed',
   });
 
@@ -40,7 +40,7 @@ export default function StudentList(): JSX.Element {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetchUsers().catch((error) => {
       console.error(error, 'error');
     });

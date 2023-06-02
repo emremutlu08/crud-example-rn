@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 
 import { Appbar } from 'react-native-paper';
 
@@ -6,7 +6,7 @@ import DrawerContent from './drawer-content';
 import PortalModal from '../ui/modal/portal-modal';
 
 export default function AppBar(): JSX.Element {
-  const [visible, setVisible] = React.useState(false);
+  const [visible, setVisible] = useState(false);
 
   const showModal = (): void => {
     setVisible(true);
